@@ -9,6 +9,14 @@
 <meta name="apple-touch-fullscreen" content="YES" />
 <style type="text/css" media="screen">@import "iui/iui.css";</style>
 <script type="application/x-javascript" src="iui/iui.js"></script>
+<style>
+	.infomation{
+		-webkit-border-radius:10px;
+		background-color:white;
+		min-height:50px;
+		padding:5px;
+	}
+</style>
 </head>
 
 <body>
@@ -42,8 +50,10 @@
 	foreach($videofiles as $video){
 		echo'<div id="'.$j++.'" class="panel" title="Now Playing">'."\n\t";
 		echo"<h2>".$video[1]."</h2>\n";
-		echo"<embed src='getmp4.php?p=".urlencode($video[0])."' type='video/mp4'/><br />\n";
-		echo"<p>Local LFile Path:$video[0]</p>\n";
+		echo"<embed style='margin:5px;' width='240' height='160' src='getmp4.php?p=".urlencode($video[0])."' type='video/mp4'/><br />\n";
+		echo"<div class='infomation'>\n";
+		echo"<span style='font-weight:bold;'>Local File Path</span><br />$video[0]\n";
+		echo"</div>\n";
 		echo"</div>\n";
 }
 ?>
