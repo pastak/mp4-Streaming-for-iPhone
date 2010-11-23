@@ -25,9 +25,10 @@
         <a id="backButton" class="button" href="#"></a>
 </div>
 <?php
+	//set paths to directory contained mp4 video
 	$loadDirList=array(
-	"D:/toOrb/MP4",
-	"D:/videos"
+	"path/to/directory",
+	"path/to/directory"
 	);
 	$videofiles=array();
 	$i=0;
